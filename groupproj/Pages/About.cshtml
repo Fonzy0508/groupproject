@@ -1,0 +1,62 @@
+﻿@page
+@model groupproj.Pages.AboutModel
+@{
+    ViewData["title"] = "About";
+}
+<style>
+</style>
+
+
+<div class="FZYcon">
+    <div class="ATM">
+        <br /><br />
+        <div class="letcon"><h3 style="margin:10px 0px 0px 60px;color:white; ">ABOUT</h3></div>
+        <p class="leftStxt">
+            We are a group of students from STI College San Jose del Monte. This website was
+            developed from the idea we've discussed and developed by a great developer in our
+            group. The purpose of this website is to help people not to forget the disinfectant
+            especially in the pandemic we are facing today. This website also contains simple tips and
+            additional information about covid whereas we can keep ourselves safe from COVID-19.
+        </p>
+    </div>
+
+    <div onblur="HDEFAQ1()">
+        <div class="hiderdv Shider" id="hiderr"></div>
+
+        <button id="XFAQ" class="Xfaq" onclick="HDEFAQ1()"><p class="XFAQq">X<p /></button>
+        <button id="FAQ1" class="faqP" onclick="SHWFAQ1()"> <p class="MVfaq">F</p> <br /> <p class="MVfaq">A</p> <br /> <p class="MVfaq">Q</p> </button>
+        <div class="TFAQ FAQ" id="FAQ"><h3 style="margin:15px 0px 0px 180px;">FAQ</h3></div>
+        <button type="button" class="FAQbtn btn3 FAQ" id="sbtn3" onclick="closeFAQ3()"><h5 style="text-align:left; margin-top:5px;">HOW TO PUT ON AND TAKE OFF A<br> MEDICAL MASK?</h5><h4 class="Rplus R"><b>-</b></h4></button>
+        <button type="button" class="FAQbtn btn3 FAQ" id="btn3" onclick="dropFAQ3()"><h5 style="text-align:left; margin-top:5px;">HOW TO PUT ON AND TAKE OFF A<br> MEDICAL MASK?</h5><h4 class="Rplus"><b>+</b></h4></button>
+        <div class="infoFAQ3 FAQ nzy" id="infoFAQ3">
+            <p class="infont">
+                Before touching the mask, clean your hands with an alcohol-based hand rub or soap and water.
+                Inspect the mask for tears or holes; do not use a mask that has previously been worn or is damaged.
+                Verify which side is the top – this is usually where the metal strip is.
+                Then, identify the inside of the mask, which is usually the white side.
+                Place the mask on your face covering your nose, mouth and chin, making sure that there are no gaps between your face and the mask. Place the straps behind the head or ears.
+                Pinch the metal strip so it moulds to the shape of your nose.
+                Remember, do not touch the front of the mask while using it to avoid contamination; if you accidentally touch it, clean your hands.<br>
+                <a href="#" style="text-align:center;">Click for more info</a>
+            </p>
+        </div>
+
+        <button type="button" class="FAQbtn btn2 FAQ" id="zyzy" onclick="closeFAQ2()"><h5 style="text-align:left; margin-top:5px;">WHO CAN BE INFECTED WITH THE VIRUS?</h5><h4 class="Rplus R"><b>-</b></h4></button>
+        <button type="button" class="FAQbtn FAQ" id="btn2" onclick="dropFAQ2()"><h5 style="text-align:left; margin-top:5px;"> WHO CAN BE INFECTED WITH THE VIRUS?</h5><h4 class="Rplus"><b>+</b></h4></button>
+        <div class="infoFAQ2 FAQ nzy" id="infoFAQ2">
+            <p class="infont">
+                COVID-19 can infect anyone, regardless of age.<br>
+                1.The groups at high risk of serious illness are as follows:<br>
+                2.People 65 years of age and older (our grandparents)<br>
+                3.People who have had an illness (for example: high blood pressure, heart and lung disease, or diabetes)<br>
+                4.Those with very dangerous pregnancies (examples: women aged 17 and younger, aged 35 and older, those with a chronic illness)<br>
+                - Updated April 10, 2020<br>
+            </p>
+        </div>
+
+        <button type="button" class="FAQbtn sbtn1 FAQ" id="sbtn1" onclick="closeFAQ()"><h5 style="text-align:left; margin-top:5px;">WHAT IS COVID-19?</h5><h4 class="Rplus R"><b>-</b></h4></button>
+        <button type="button" class="FAQbtn FAQ" id="btn1" onclick="dropFAQ()"><h5 style="text-align:left; margin-top:5px;">WHAT IS COVID-19?</h5><h4 class="Rplus"><b>+</b></h4></button>
+        <div class="infoFAQ FAQ nzy" id="infoFAQ">
+            <p class="infont"><b>COVID-19</b> is the infectious disease caused by the coronavirus, SARS-CoV-2, which is a respiratory pathogen. WHO first learned of this new virus from cases in Wuhan, People’s Republic of China on 31 December 2019.</p>
+        </div>
+    </div>

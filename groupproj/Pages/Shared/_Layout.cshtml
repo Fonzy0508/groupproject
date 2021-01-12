@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en" style=" overflow-x: hidden !important;">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Disinfection Reminder</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body style=" overflow-x: hidden !important;">
+    <header>
+
+        <div class="mynav">
+            <div class="BRLogo">
+                <img src="~/img/logo.png" alt="Logo" class="logo BRLogo" />
+            </div>
+            <a class="navbar-brand title" asp-area="" asp-page="/Index">𝑫𝒊𝒔𝒊𝒏𝒇𝒆𝒄𝒕𝒊𝒐𝒏 𝑹𝒆𝒎𝒊𝒏𝒅𝒆𝒓</a>
+            <button type="button" class="remindbutton accbutton" id="fzy" onclick="reminderopen()"><img src="~/img/chronometer.png" alt="reminders" class="imgbutton fb " /></button>
+            <button type="button" class="remindbutton accbutton" style="z-index:5;" onclick="closeRemind()"><h4 style="padding-top:5px;">X</h4></button>
+            <button type="button" id="loginbtn" class="loginbutton accbutton" onclick="loginopen()"><img src="~/img/account.png" alt="acc" class="imgbutton gm" onclick="loginopen()" /></button>
+            <button type="button" id="logoutbtn" class="logoutbutton accbutton" onclick="logoutNW()"><img src="~/img/logout.png" alt="logout" class="imgbutton" /></button>
+        </div>
+        <div class="navs mynav">
+            <p style="padding-left:20px; color:white">
+                <button class="navbar-toggler zyzy" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation" style="z-index:15 !important;">
+                    <span class="navbar-toggler-icon ico"></span>
+                </button>
+                ꜰɪɢʜᴛ ᴡɪᴛʜ ᴄᴏᴠɪᴅ-19<br>
+                #ʙᴇᴀᴛᴄᴏᴠɪᴅ-19
+
+            </p>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 zyzyzy">
+
+            <div class="container">
+
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Reminder">Reminders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" id="accFzy" asp-area="" asp-page="/Settings">Account</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+    <div class="FZYcon">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <div class="login" id="login" style="transition:0s !important;">
+        <button type="button" class="closebtn" id="closebtn" onclick="closezybtn()"><h4 style="padding-top:5px;">X</h4></button>
+        <img src="~/img/account.png" alt="acc logo" class="loginimg" />
+        <h4 id="cng">Email</h4>
+        <input type="text" id="EMAILinpt" class="inp1" required />
+        <h4 id="cng">Password</h4>
+        <input type="password" id="PASSinpt" class="inp1" required />
+        <button type="button" class="btnlg" onclick="loginNW()"><h5>Log in</h5></button>
+        <hr style="width:35%; float:left; margin:20px 30px 20px 20px;" /><p style="float:left;" class="text-center"><b>  or </b> </p> <hr style="width:35%; float:right; margin:20px;" />
+        <button type="button" class="btnlg" onclick="signupclc()"><h5>Sign up</h5></button>
+    </div>
+    <div id="signup-con" class="login">
+        <button type="button" class="closebtn" id="closebtn1" onclick="closezybtn()"><h4 style="padding-top:5px;">X</h4></button>
+        <img src="~/img/account.png" alt="acc logo" class="loginimg" />
+        <h4 id="cng">E-mail</h4>
+        <input type="text" id="SU-EMAILinpt" class="inp1" required /><br />
+        <h4 id="cng">Password</h4>
+        <input type="password" id="SU-PASSinpt" class="inp1" required />
+        <button type="submit" class="btnlg" onclick="signup()"><h5>Sign up</h5></button>
+    </div>
+     
+
+    <div id="addReminder" class="login">
+        <button type="button" class="closebtn" id="closebtn2" onclick="closezybtn()"><h4 style="padding-top:5px;">X</h4></button>
+        <img src="~/img/chronometer.png" alt="add logo" class="loginimg" />
+        <h4 id="cng">Title</h4>
+        <input type="text" id="add-RT" class="inp1" required /><br />
+        <h4 id="cng">time</h4>
+        <input type="text" id="add-RCH" class="time hour" value="Hour" onfocus="this.value = '';" required />
+        <input type="text" id="add-RCM" class="time min" value="Mins" onfocus="this.value = '';" required />
+        <input type="text" id="add-RCS" class="time sec" value="Secs" onfocus="this.value = '';" required />
+        <button type="submit" class="btnlg" onclick="AddR()"><h5>Add now</h5></button>
+    </div>
+
+    <div class="timmerremindercon" id="timmerremindercon">
+        <div class="addtimmercon">
+            <button type="button" id="Lifs" class="addreminderBtn" onclick="addRclc()"><img src="~/img/plus.png" alt="plusicon" class="icnbtn"><h5 style="padding-top:4px; float:left;">Add Reminder</h5></button>
+            <p id="LIF" class="LIFs"><a class="nav-link text-dark" onclick="loginopen()">Log In<br> first to sync your <b>REMINDERS</b></a></p>
+
+        </div>
+
+        <div class="remindertimercon">
+            <ul class="guides"> 
+
+            </ul>
+        </div>
+    </div>
+    <div class="blur" id="blur"></div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+    <script>
+        // my web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDYkQR05O6xYjQ5hGtiDUE4ypelsJQ5NKY",
+            authDomain: "disinfection-reminder.firebaseapp.com",
+            projectId: "disinfection-reminder",
+            storageBucket: "disinfection-reminder.appspot.com",
+            messagingSenderId: "848003366923",
+            appId: "1:848003366923:web:d4d3d1433e373706fc070e",
+            measurementId: "G-JP0R0X450L"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+      
+
+       
+    </script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/auth.js" asp-append-version="true"></script>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

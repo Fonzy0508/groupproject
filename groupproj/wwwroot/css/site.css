@@ -1,0 +1,911 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height:100%;
+}
+.mynav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    height: 55px;
+    z-index: 10;
+}
+.navs {
+    top: 55px !important;
+    background-color: #1d6b3c !important;
+}
+.title {
+    margin:7px 0px 0px 50px;
+    font-weight:bold;
+    font-size:20px;
+    color:black;
+}
+body {
+    /* Margin bottom by footer height */
+    background-color: white;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+.navbar {
+    margin-bottom: 0 !important;
+    padding: 0px !important;
+    height: 55px !important;
+    background-color: #909C98 !important;
+    border: 0px !important;
+    z-index: 10;
+    position: absolute;
+    top: 105px;
+    width: 100%;
+}
+.nav-link {
+    padding: 15px 8px 15px 8px !important;
+}
+    .nav-link:hover {
+        background-color: #a1c4e3 !important;
+    }
+.pb-3 {
+    padding-bottom:0 !important;
+    margin-bottom:0 !important;
+}
+
+/*FZY CODE*/
+.nav-link {
+    background-color: #909C98;
+}
+.FZYcon {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+    /*index CSS*/
+    /*slide*/
+
+.slides {
+    width: 100%;
+    height: 625px ;
+    position: absolute;
+    top:75px;
+    border-radius:0px !important;
+}
+.slideimg1 {
+    left: -1348px;
+    animation: slide1 20s infinite;  
+    z-index: 7;
+}
+.slideimg2 {
+    left: -1348px;
+    transition:3s ease;
+    animation: slide2 20s infinite;
+    z-index: 8;
+}
+.mainimg {
+    left:0;
+}
+.LIFs {
+    margin-top:50px;
+}
+@keyframes slide1 {
+  
+    34% , 100%{
+       left:0;
+   }
+    0%, 33% {
+        left: -1348px;
+    }
+}
+@keyframes slide2 {
+   
+    67%, 100%{
+        left:0;
+    }
+    0%, 66% {
+        left: -1348px;
+    }
+}
+@keyframes DisN1 {
+    100% {
+        display:none;
+    }
+}
+
+/*layout CSS*/
+/*logo in navbar*/
+.ico {
+    background-image:url('../img/meat.png');
+}
+.BRLogo {
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    width: 50px;
+    height: 50px;
+    z-index: 6;
+}
+.navbar-toggler-icon{
+    background-image:url('../img/meat.png') !important;
+    z-index:16 !important;
+}
+
+.logo {
+    z-index: 7 !important;
+}
+.container {
+    margin-left:35px !important;
+}
+/*accoutn buttons*/
+.accbutton {
+    width: 45px;
+    height: 45px;
+    border: 2px;
+    border-radius: 100px;
+    position: absolute;
+    z-index: 6;
+}
+.imgbutton {
+    width: 35px;
+    height: 35px;
+}
+.remindbutton {
+    right: 60px !important;
+}
+.loginbutton {
+    right: 10px !important;
+}
+.checkRbutton {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    left: 400px;
+    bottom: 20px;
+    border: 2px;
+    border-radius: 30px;
+}
+/*login div clicked*/
+.login {
+    overflow:hidden;
+    position:relative;
+    bottom:0 !important;
+    width:400px;
+    margin:auto;
+    height:500px;
+    background-color:white;
+    border:0px;
+    border-radius: 50px;
+    z-index:17;
+    visibility:hidden;
+    display:none;
+}
+.loginimg {
+    width: 125px;
+    height:125px;
+    margin:20px 140px 40px 140px ;
+    display:block;
+}
+.btnlg {
+    margin:8px 80px 20px 130px;
+    border:1px;
+    border-radius: 40px;
+    width: 150px !important;
+    height:50px;
+}
+#cng {
+    text-align:center;
+}
+#elm {
+    text-align:center;
+}
+
+.icofb {
+    width:20px !important;
+    height:20px !important;
+    margin-right: 10px;
+}
+.closebtn {
+    position:absolute;
+    top:30px;
+    left:10px;
+    width: 35px;
+    height:35px;
+    border:0px;
+    background-color:white;
+    visibility:hidden;
+}
+.closebtn1 {
+    visibility:hidden;
+}
+.inp1 {
+    margin-left:120px;
+}
+#login {
+    display:block;
+}
+#logoutbtn {
+    visibility:hidden;
+    right:10px;
+}
+#signup-con {
+    display:none;
+}
+/*remindertimer container clicked*/
+.timmerremindercon {
+    position: absolute;
+    top: 160px;
+    right: -401px;
+    width: 400px;
+    height: 620px;
+    background-color: #40916c;
+    transition: 1s ease-in-out;
+    z-index: 10;
+    border:0px;
+    border-bottom-left-radius:30px;
+    animation-name:DisN1;
+    animation-duration:2s;
+}
+.addtimmercon{
+    width:100%;
+    height:auto;
+    display:block;
+}
+.addreminderBtn {
+    width: 100%;
+    height: 40px;
+    border:0px !important;
+}.icnbtn {
+     width:30px;
+     height:30px;
+     float:left;
+     margin:2px 20px 0px 10px ;
+ }
+.ttl {
+    width: 400px;
+    position: relative;
+    right: 40px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: #1d6b3c;
+}
+.cnt {
+    width: 400px;
+    height: 40px;
+    font-size:20px;
+}
+ grey{
+     
+     font-weight:bolder;
+ }
+#addReminder {
+    display: none;
+}
+.time {
+    width:50px;
+}
+.hour {
+    margin-left:120px;
+}
+/*reminder CSS*/
+.img-reminder-container {
+    width: 100%;
+    height: 438px;
+    background-color: white;
+    display:block;
+
+}
+.imageandbutton {
+    z-index:7 !important;
+    width: 250px;
+    height: 280px;
+    margin: 45px 45px 45px 10px;
+    border: 2px;
+    float: left;
+
+}
+.zy {
+    background-color:white !important;
+}
+.Rimg1 {
+    z-index: 7 !important;
+    width: 200px;
+    height: 150px;
+    float: left;
+    margin: 30px;
+}
+.reminder-button {
+    z-index: 7 !important;
+    float: left;
+    width: 200px;
+    height: 60px;
+    margin:20px 40px 20px 40px;
+    border: 1px;
+    border-radius: 50px;
+}
+.bgreminder {
+    position:absolute;
+    top:100px;
+    width: 100%;
+    height: 584px;
+    z-index:1;
+}
+.Rpad {
+    padding: 5px 10px 20px 10px;
+}
+
+.Rpad2 {
+    padding: 15px 10px 20px 10px;
+}
+.Rintro {
+    position:relative;
+    top:10px;
+    color:white;
+    background-color: darkgreen;
+    width:410px;
+    height:35px;
+    padding-top:7px;
+    padding-left:10px;
+}
+.bgR {
+    background-color: white;
+    height:100% !important;
+
+}
+.blur {
+    visibility:hidden;
+    position:absolute;
+    top:0px;
+    left:0;
+    background-color:black;
+    width:100%;
+    height:100%;
+    opacity:0.9;
+    z-index:15;
+}
+/*another div "home self quarantine"*/
+.introSQ {
+    color:darkgreen;
+    margin-left: 60px;
+    font-size: 1.17em;
+    font-weight:bolder;
+}
+.HSQ {
+    width: 100%;
+    height: 968px;
+    display: block;
+    background-color: white;
+}
+.linediv {
+    width: 660px;
+    height: 10px;
+    background-color: darkgreen;
+    margin-left: 40px;
+}
+.Rimg2 {
+    z-index: 7 !important;
+    width: 200px;
+    height: 150px;
+    float: left;
+    margin: 10px 70px 15px 70px;
+    border:1px;
+    border-radius: 30px;
+
+}
+.txthq {
+    display: block;
+    text-align:center;
+    margin: 0px 80px 0px 70px;
+    width: 200px !important;
+    height: 30px !important;
+}
+.fixH {
+    margin: 5px 45px 0px 45px !important;
+    height: 250px !important; 
+}
+/*FAQ container*/
+.FAQcon {
+    position:absolute;
+    top:75px;
+    right:0px;
+    background-color:yellow;
+    width:420px;
+    height:500px;
+    z-index:6;
+    display:block;
+}
+.FAQbtn {
+    position: absolute;
+    top: 105px;
+    right: 0px;
+    width: 420px;
+    height: 45px;
+    z-index: 10 !important;
+    border: 0px;
+    background-color: #1d6b3c;
+    border-top-left-radius: 0px;
+    color: white !important;
+    transition: 1s ease-in-out;
+}
+.TFAQ {
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    width: 420px;
+    height: 65px;
+    z-index: 10 !important;
+    border: 0px;
+    border-top-left-radius: 30px;
+    background-color: #1d6b3c;
+    transition: 1s ease-in-out;
+}
+.Rplus {
+    position:absolute;
+    top:5px;
+    right:5px;
+    color:white;
+}
+.R {
+    color:black;
+}
+.infoFAQ {
+    width: 420px;
+    height: 120px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    z-index: 7;
+    transition: 1s ease-in-out;
+}
+.infoFAQ2 {
+    width: 420px;
+    height: 250px;
+    background-color: white;
+    position: absolute;
+    top: -100px;
+    right: 0px;
+    z-index: 7;
+    transition: 1s ease-in-out;
+}
+.infoFAQ3 {
+    width: 420px;
+    height: 330px;
+    background-color: white;
+    position: absolute;
+    top: -200px;
+    right: 0px;
+    z-index: 7;
+    transition: 1s ease-in-out;
+}
+
+.infont {
+    font-size:15px;
+    text-align:left;
+}
+
+.btn2 {
+    top: 150px;
+    border-top-left-radius: 0px !important;
+    border-top: 5px;
+    border-bottom: 1px;
+    transition: 1s ease-in-out;
+    color: white !important;
+}
+#btn2 {
+    top: 150px;
+    height: 45px !important;
+    transition: 1s ease-in-out;
+    color: white !important;
+}
+.btn3 {
+    top: 190px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 20px;
+    height: 65px;
+    transition: 1s ease-in-out;
+    color: white !important;
+}
+
+#btn3 {
+    top: 190px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 20px;
+    transition: 1s ease-in-out;
+    color: white !important;
+}
+#sbtn3 {
+    visibility: hidden;
+    border-bottom-left-radius: 0px;
+    color: white !important;
+}
+.faqP {
+    visibility: hidden;
+    position: absolute;
+    top:45px;
+    right: 0;
+    background-color: #1d6b3c;
+    border: 1px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 50px;
+    height: 210px;
+}
+
+.MVfaq {
+    margin:15px 0px 5px 4px;
+    padding:5px;
+    display:block;
+}
+.Xfaq {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 130px;
+    right: -425px;
+    z-index: 7;
+    background-color: #1d6b3c;
+    border-radius: 50px;
+    border:0px;
+    visibility:hidden;
+    transition: 1s ease-in-out;
+}
+.XFAQq {
+    font-size: 25px;
+    font-weight: bolder;
+    position:absolute;
+    top: 5px;
+    left: 8px;
+}
+/*homequarntine img txt containers*/
+/*clickables in reminder*/
+.Reminderpages {
+    align-content: center;
+    text-align: left;
+    height: 100% !important;
+    margin: 0px 300px 0px 350px !important;
+    display: block;
+}
+.imgcovidsign {
+    z-index: 7 !important;
+    width: 300px;
+    height: 250px;
+    margin: 80px 200px 20px 200px;
+}
+/*about page*/
+.about-button {
+    width: 300px !important;
+    height:60px;
+    border:0px;
+    border-radius: 40px;
+    float:left;
+    margin-left:20px !important;
+}
+.letcon {
+    float:left;
+    width: 500px;
+    height: 50px;
+    background-color: #1d6b3c;
+    
+}
+.dd {
+    top:250px !important;
+}
+.imga {
+    width:300px;
+    height:100px;
+    position:absolute;
+    top:320px;
+    margin-left:50px;
+}
+.leftStxt {
+    display:block;
+    float:left;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+
+}
+.hiderdv {
+    position: absolute;
+    width: 588px;
+    height: 400px;
+    background-color: #a1c4e3 !important;
+    z-index: 8 !important;
+    transition: 1s ease-in-out;
+}
+.Shider {
+    position: absolute;
+    top: -250px;
+    right: 0px;
+    width: 420px;
+    background-color: white !important;
+    z-index: 9;
+}
+.txtinfo {
+    position: absolute;
+    top: 100px;
+    background-color: #a1c4e3 !important;
+    width: 588px;
+    height: 400px;
+    z-index: 4 !important;
+    transition: 1s ease-in-out;
+}
+.infoA {
+   text-align:center;
+    font-weight:bold;
+    font-size: 20px;
+}
+.ATM {
+    width: 850px;
+    height: 300px;
+}
+/*settings*/
+.infos {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    width: 400px;
+}
+.white {
+    position:relative;
+    margin:auto;
+    top: 40px;
+    width:450px;
+    height:400px;
+}
+.optionL {
+    display:block;
+    float:left;
+}
+
+img {
+    border-radius: 1000px;
+    height: 250px;
+    width: 250px;
+}
+
+.buttf {
+    position:relative;
+    margin:auto;
+    height: 35px;
+    width: 180px;
+    font-size: 15px;
+    font-weight: bolder;
+    border: 2px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.siz {
+    background-color: darksalmon;
+    position: relative;
+    top:-35px;
+    left: 200px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.sizes {
+    font-size: 17px;
+    margin: 30px;
+    display:block;
+    font-weight:bold;
+}
+
+.size2 {
+    font-size: 30px;
+    
+}
+.zyzy {
+    display:none !important;
+}
+#acczy {
+    display:none !important;
+}
+@media (max-width:1250px) {
+    .FAQ {
+        position: absolute;
+        right: -420px ;
+    }
+
+    .hiderdv {
+        transition: none !important;
+        right: -420px;
+    }
+
+
+
+
+
+
+
+    .nzy {
+        transition: none !important;
+    }
+
+    .zyzy {
+        position: absolute !important;
+        right: 1px;
+    }
+    .faqP {
+        visibility: visible;
+    }
+}
+@media (max-width:930px){
+    .img-reminder-container {
+        height: 408px;
+    }
+    .imageandbutton {
+        width: 220px;
+        height: 200px;
+    }
+
+    .Rimg1 {
+        width: 170px;
+        height: 120px;
+        margin: 0px 0px 0px 10px;
+    }
+
+    .reminder-button {
+        width: 120px;
+        height: 50px;
+        margin: 0px 0px 0px 30px;
+    }
+    .LPP {
+        margin-left:30px !important;
+    }
+
+    .Rimg2 {
+        width: 170px !important;
+        margin:0px 0px 0px 20px;
+    }
+    .txthq {
+        display:block;
+        margin:0px;
+    }
+
+    .introSQ {
+        margin-left:20px;
+    }
+    
+    .ATM {
+        width: 750px;
+    }
+   
+}
+@media (max-width: 861px) {
+    .img-reminder-container {
+        height:578px;
+    }
+    .ATM {
+        width: 650px;
+    }
+}
+@media (max-width: 720px) {
+    .ATM {
+        width: 550px;
+    }
+}
+@media (max-width:600px) {
+    .FZYcon {
+        top: 55px;
+    }
+
+    .timmerremindercon {
+        display: none;
+    }
+   
+   .zyzyzy {
+      height:0px !important;
+   }
+   .zyzy {
+       display:block !important;
+   }
+   .slides {
+       top:55px !important;
+       height: 300px;
+   }
+
+   .imageandbutton {
+       width: 150px;
+       height:180px;
+   }
+   .LPP {
+       margin-bottom:0px;
+   }
+    .Rimg1 {
+        width:100px;
+        height:100px;
+        margin:0px 0px 0px 10px;
+    }
+    .reminder-button {
+        width:120px;
+        height:50px;
+        margin:0px;
+    }
+    .img-reminder-container {
+        height: 538px;
+    }
+
+    .Rimg2 {
+        width: 100px !important;
+        height:100px;
+        margin: 0px 40px 0px 40px;
+        
+    }
+    .introSQ {
+        margin-left:20px;
+    }
+    .linediv {
+        margin: 0px;
+        width: 450px;
+    }
+    .ATM {
+        width : 400px;
+    }
+    .letcon {
+        width : 400px;
+    }
+}

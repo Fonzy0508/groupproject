@@ -1,0 +1,99 @@
+﻿@page
+@model groupproj.Pages.Index1Model
+@{
+    ViewData["title"] = "REMINDERS";
+}
+<style>
+    .reminder-button:hover  {
+        background-color: darkgoldenrod;
+        color:black;
+    }
+</style>
+<div class="FZYcon">
+    <div class="img-reminder-container">
+        <h5 class="Rintro">3 REMINDERS THAT YOU SHOULD KNOW:</h5>
+        <div class="imageandbutton">
+            <a class="" asp-area="" asp-page="/COVIDsigns"><img src="~/img/pic1.png" class="Rimg1" alt="image 1" /></a>
+            <button type="button" class="reminder-button"><a class=" Rpad" asp-area="" asp-page="/COVIDsigns">Symptomps of <br/>COVID-19</a></button>
+        </div>
+        <div class="imageandbutton">
+            <a class="" asp-area="" asp-page="/Runwell"><img src="~/img/unwell1.png" class="Rimg1" alt="image 2" /></a>
+            <button type="button" class="reminder-button"><a class="  Rpad2" asp-area="" asp-page="/Runwell">Feeling unwell?</a></button>
+        </div>
+        <div class="imageandbutton LPP">
+             <a class="" asp-area="" asp-page="/RExposionrisk"><img src="~/img/pic2.png" class="Rimg1" alt="image " /></a>
+            <button type="button" class="reminder-button" ><a class=" Rpad2" asp-area="" asp-page="/RExposionrisk">Exposion Risks</a></button>
+        </div>
+
+        <div onblur="HDEFAQ1()">
+            <div class="hiderdv Shider" id="hiderr"></div>
+           
+            <button id="XFAQ" class="Xfaq" onclick="HDEFAQ1()"><p class="XFAQq">X<p /></button>
+            <button id="FAQ1" class="faqP" onclick="SHWFAQ1()"> <p class="MVfaq">F</p> <br /> <p class="MVfaq">A</p> <br /> <p class="MVfaq">Q</p> </button>
+            <div class="TFAQ FAQ" id="FAQ"><h3 style="margin:15px 0px 0px 180px;">FAQ</h3></div>
+            <button type="button" class="FAQbtn btn3 FAQ" id="sbtn3" onclick="closeFAQ3()"><h5 style="text-align:left; margin-top:5px;">HOW TO PUT ON AND TAKE OFF A<br> MEDICAL MASK?</h5><h4 class="Rplus R"><b>-</b></h4></button>
+            <button type="button" class="FAQbtn btn3 FAQ" id="btn3" onclick="dropFAQ3()"><h5 style="text-align:left; margin-top:5px;">HOW TO PUT ON AND TAKE OFF A<br> MEDICAL MASK?</h5><h4 class="Rplus"><b>+</b></h4></button>
+            <div class="infoFAQ3 FAQ nzy" id="infoFAQ3">
+                <p class="infont">
+                    Before touching the mask, clean your hands with an alcohol-based hand rub or soap and water.
+                    Inspect the mask for tears or holes; do not use a mask that has previously been worn or is damaged.
+                    Verify which side is the top – this is usually where the metal strip is.
+                    Then, identify the inside of the mask, which is usually the white side.
+                    Place the mask on your face covering your nose, mouth and chin, making sure that there are no gaps between your face and the mask. Place the straps behind the head or ears.
+                    Pinch the metal strip so it moulds to the shape of your nose.
+                    Remember, do not touch the front of the mask while using it to avoid contamination; if you accidentally touch it, clean your hands.<br>
+                    <a href="#" style="text-align:center;">Click for more info</a>
+                </p>
+            </div>
+
+            <button type="button" class="FAQbtn btn2 FAQ" id="zyzy" onclick="closeFAQ2()"><h5 style="text-align:left; margin-top:5px;">WHO CAN BE INFECTED WITH THE VIRUS?</h5><h4 class="Rplus R"><b>-</b></h4></button>
+            <button type="button" class="FAQbtn FAQ" id="btn2" onclick="dropFAQ2()"><h5 style="text-align:left; margin-top:5px;"> WHO CAN BE INFECTED WITH THE VIRUS?</h5><h4 class="Rplus"><b>+</b></h4></button>
+            <div class="infoFAQ2 FAQ nzy" id="infoFAQ2">
+                <p class="infont">
+                    COVID-19 can infect anyone, regardless of age.<br>
+                    1.The groups at high risk of serious illness are as follows:<br>
+                    2.People 65 years of age and older (our grandparents)<br>
+                    3.People who have had an illness (for example: high blood pressure, heart and lung disease, or diabetes)<br>
+                    4.Those with very dangerous pregnancies (examples: women aged 17 and younger, aged 35 and older, those with a chronic illness)<br>
+                    - Updated April 10, 2020<br>
+                </p>
+            </div>
+
+            <button type="button" class="FAQbtn sbtn1 FAQ" id="sbtn1" onclick="closeFAQ()"><h5 style="text-align:left; margin-top:5px;">WHAT IS COVID-19?</h5><h4 class="Rplus R"><b>-</b></h4></button>
+            <button type="button" class="FAQbtn FAQ" id="btn1" onclick="dropFAQ()"><h5 style="text-align:left; margin-top:5px;">WHAT IS COVID-19?</h5><h4 class="Rplus"><b>+</b></h4></button>
+            <div class="infoFAQ FAQ nzy" id="infoFAQ">
+                <p class="infont"><b>COVID-19</b> is the infectious disease caused by the coronavirus, SARS-CoV-2, which is a respiratory pathogen. WHO first learned of this new virus from cases in Wuhan, People’s Republic of China on 31 December 2019.</p>
+            </div>
+        </div> 
+    </div>
+
+    <div class="HSQ">
+        <div class="linediv"></div>
+        <p class="introSQ">HOME SELF-QUARANTINE INSTRUCTION</p>
+
+        <div class="SHQcon">
+            <div class="imageandbutton fixH">
+                <img src="~/img/reminder/stayhome.jpg" alt="stay home" class="Rimg2" />
+                <h6 class="txthq">STAY AT HOME</h6>
+            </div>
+            <div class="imageandbutton fixH">
+                <img src="~/img/reminder/cough.jpg" alt="Cough" class="Rimg2" />
+                <h6 class="txthq">COVER YOUR COUGH AND SNEEZES WITH TISSUE</h6>
+            </div>
+            <div class="imageandbutton fixH">
+                <img src="~/img/reminder/hand.jpg" alt="hand" class="Rimg2" />
+                <h6 class="txthq">AVOID SHARING HOUSEHOLD ITEMS</h6>
+            </div>
+            <div class="imageandbutton fixH">
+                <img src="~/img/reminder/temp.jpg" alt="hand" class="Rimg2" />
+                <h6 class="txthq">MONITOR YOUR TEMPERATURE</h6>
+            </div>
+            <div class="imageandbutton fixH">
+                <img src="~/img/reminder/washhands.jpg" alt="hand" class="Rimg2" />
+                <h6 class="txthq">WASH YOUR HANDS WITH SOAP</h6>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
